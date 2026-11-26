@@ -1,0 +1,266 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #171717;
+  background: #fff;
+}
+
+.topo {
+  width: 100%;
+  min-height: 82px;
+  padding: 8px 3.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #171717;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marca img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+}
+
+.menu a,
+.duvidas {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.menu a:hover,
+.duvidas:hover {
+  opacity: 0.7;
+}
+
+.duvidas {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 9px 13px;
+  white-space: nowrap;
+}
+
+.principal {
+  width: 100%;
+  padding: 70px 22px;
+}
+
+.apresentacao {
+  width: min(720px, 100%);
+  margin: 0 auto 90px;
+  text-align: center;
+}
+
+.apresentacao h1 {
+  margin-bottom: 24px;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.apresentacao p {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.saiba-mais {
+  color: #000;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.catalogo {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.titulo-catalogo {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.titulo-catalogo h2 {
+  margin-bottom: 12px;
+  font-size: 32px;
+}
+
+.titulo-catalogo p {
+  color: #777;
+  font-size: 15px;
+}
+
+.categoria {
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.categoria h3 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 65px;
+}
+
+.produto {
+  width: 260px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 9px;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+}
+
+.produto img {
+  display: block;
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px;
+}
+
+.informacoes h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.informacoes p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.informacoes span {
+  color: #e45b91;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sobre {
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.sobre h2 {
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.sobre p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+footer {
+  padding: 25px;
+  background: #171717;
+  color: #fff;
+  text-align: center;
+}
+
+.voltar-inicio {
+  display: block;
+  padding: 18px;
+  color: #000;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 650px) {
+  .topo {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .marca {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .menu {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .menu a,
+  .duvidas {
+    font-size: 13px;
+  }
+
+  .principal {
+    padding: 55px 16px;
+  }
+
+  .apresentacao {
+    margin-bottom: 65px;
+  }
+
+  .apresentacao p {
+    font-size: 15px;
+  }
+
+  .produtos {
+    gap: 18px;
+  }
+
+  .produto {
+    width: min(100%, 320px);
+  }
+
+  .produto img {
+    height: 260px;
+  }
+}
